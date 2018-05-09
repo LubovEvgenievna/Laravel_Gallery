@@ -22,31 +22,31 @@
 <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
 
 <!-- Bootstrap -->
-<link href="_include/css/bootstrap.min.css" rel="stylesheet">
+<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
 <!-- Main Style -->
-<link href="_include/css/main.css" rel="stylesheet">
+<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
 <!-- Supersized -->
-<link href="_include/css/supersized.css" rel="stylesheet">
-<link href="_include/css/supersized.shutter.css" rel="stylesheet">
+<link href="{{ asset('css/supersized.css') }}" rel="stylesheet">
+<link href="{{ asset('css/supersized.shutter.css') }}" rel="stylesheet">
 
 <!-- FancyBox -->
-<link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="{{ asset('css/fancybox/jquery.fancybox.css') }}" rel="stylesheet">
 
 <!-- Font Icons -->
-<link href="_include/css/fonts.css" rel="stylesheet">
+<link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
 
 <!-- Shortcodes -->
-<link href="_include/css/shortcodes.css" rel="stylesheet">
+<link href="{{ asset('css/shortcodes.css') }}" rel="stylesheet">
 
 <!-- Responsive -->
-<link href="_include/css/bootstrap-responsive.min.css" rel="stylesheet">
-<link href="_include/css/responsive.css" rel="stylesheet">
+<link href="{{ asset('css/bootstrap-responsive.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
 <!-- Supersized -->
-<link href="_include/css/supersized.css" rel="stylesheet">
-<link href="_include/css/supersized.shutter.css" rel="stylesheet">
+<link href="{{ asset('css/supersized.css') }}" rel="stylesheet">
+<link href="{{ asset('css/supersized.shutter.css') }}" rel="stylesheet">
 
 <!-- Google Font -->
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
@@ -60,7 +60,7 @@
 <link rel="apple-touch-icon" sizes="144x144" href="#">
 
 <!-- Modernizr -->
-<script src="_include/js/modernizr.js"></script>
+<script src="{{ asset('js/modernizr.js') }}"></script>
 
 <!-- Analytics -->
 <script type="text/javascript">
@@ -82,7 +82,6 @@
 
 
 <body>
-
 <!-- This section is for Splash Screen -->
 <div class="ole">
 <section id="jSplash">
@@ -124,7 +123,6 @@
                 <li><a href="#work">Our Work</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
-				<li><a href="shortcodes.php" class="external">Shortcodes</a></li>
             </ul>
         </nav>
         
@@ -170,36 +168,36 @@
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 design">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The City" href="_include/img/work/full/image-01-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The City" href="{{ asset('img/work/full/image-01-full.jpg') }}">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-01.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="{{ asset('img/work/thumbs/image-01.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 design">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Office" href="_include/img/work/full/image-02-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Office" href="{{ asset('img/work/full/image-02-full.jpg') }}">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-02.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="{{ asset('img/work/thumbs/image-02.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 photography">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="_include/img/work/full/image-03-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="{{ asset('img/work/full/image-03-full.jpg') }}">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-03.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="{{ asset('img/work/full/image-03-full.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                             </li>
                         	<!-- End Item Project -->
                             
@@ -211,31 +209,31 @@
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-08.jpg" alt="Video">
+                                <img src="{{ asset('img/work/thumbs/image-08.jpg') }}" alt="Video">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 photography">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Sea" href="_include/img/work/full/image-04-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Sea" href="{{ asset('img/work/full/image-04-full.jpg') }}">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-04.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="{{ asset('img/work/thumbs/image-04.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 photography">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Clouds" href="_include/img/work/full/image-05-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Clouds" href="{{ asset('img/work/full/image-05-full.jpg') }}">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-05.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="{{ asset('img/work/thumbs/image-05.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                             </li>
                         	<!-- End Item Project -->
                             
@@ -247,31 +245,31 @@
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-09.jpg" alt="Video">
+                                <img src="{{ asset('img/work/thumbs/image-09.jpg') }}" alt="Video">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 design">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Dark" href="_include/img/work/full/image-06-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Dark" href="{{ asset('img/work/full/image-06-full.jpg') }}">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-06.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="{{ asset('img/work/thumbs/image-06.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                             </li>
                         	<!-- End Item Project -->
                             
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 design">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Beach" href="_include/img/work/full/image-07-full.jpg">
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Beach" href="{{ asset('img/work/full/image-07-full.jpg') }}">
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-07.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="{{ asset('img/work/thumbs/image-07.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                             </li>
                         	<!-- End Item Project -->
                         </ul>
@@ -309,7 +307,7 @@
                     <span class="overlay-img"></span>
                     <span class="overlay-text-thumb">CTO/Founder</span>
                 </div>
-                <img src="_include/img/profile/profile-01.jpg" alt="John Doe">
+                <img src="{{ asset('img/profile/profile-01.jpg') }}" alt="John Doe">
             </div>
             <h3 class="profile-name">John Doe</h3>
             <p class="profile-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat <a href="#">hendrerit dictum</a>. 
@@ -332,7 +330,7 @@
                     <span class="overlay-img"></span>
                     <span class="overlay-text-thumb">Creative Director</span>
                 </div>
-                <img src="_include/img/profile/profile-02.jpg" alt="Jane Helf">
+                <img src="{{ asset('img/profile/profile-02.jpg') }}" alt="Jane Helf">
             </div>
             <h3 class="profile-name">Jane Helf</h3>
             <p class="profile-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat <a href="#">hendrerit dictum</a>. 
@@ -354,7 +352,7 @@
                     <span class="overlay-img"></span>
                     <span class="overlay-text-thumb">Lead Designer</span>
                 </div>
-                <img src="_include/img/profile/profile-03.jpg" alt="Joshua Insanus">
+                <img src="{{ asset('img/profile/profile-03.jpg') }}" alt="Joshua Insanus">
             </div>
             <h3 class="profile-name">Joshua Insanus</h3>
             <p class="profile-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat <a href="#">hendrerit dictum</a>. 
@@ -439,23 +437,6 @@
 </div>
 <!-- End Contact Section -->
 
-<!-- Twitter Feed -->
-<div id="twitter-feed" class="page-alternate">
-	<div class="container">
-    	<div class="row">
-            <div class="span12">
-                <div class="follow">
-                    <a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>
-                </div>
-                    
-                <div id="ticker" class="query"> 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Twitter Feed -->
-
 <!-- Socialize -->
 <div id="social-area" class="page">
 	<div class="container">
@@ -463,15 +444,15 @@
             <div class="span12">
                 <nav id="social">
                     <ul>
-                        <li><a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                        <li><a href="http://dribbble.com/Bluxart" title="Follow Me on Dribbble" target="_blank"><span class="font-icon-social-dribbble"></span></a></li>
-                        <li><a href="http://forrst.com/people/Bluxart" title="Follow Me on Forrst" target="_blank"><span class="font-icon-social-forrst"></span></a></li>
-                        <li><a href="http://www.behance.net/alessioatzeni" title="Follow Me on Behance" target="_blank"><span class="font-icon-social-behance"></span></a></li>
-                        <li><a href="https://www.facebook.com/Bluxart" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://plus.google.com/105500420878314068694" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                        <li><a href="http://www.linkedin.com/in/alessioatzeni" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
-                        <li><a href="http://themeforest.net/user/Bluxart" title="Follow Me on ThemeForest" target="_blank"><span class="font-icon-social-envato"></span></a></li>
-                        <li><a href="http://zerply.com/Bluxart/public" title="Follow Me on Zerply" target="_blank"><span class="font-icon-social-zerply"></span></a></li>
+                        <li><a href="#" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+                        <li><a href="#" title="Follow Me on Dribbble" target="_blank"><span class="font-icon-social-dribbble"></span></a></li>
+                        <li><a href="#" title="Follow Me on Forrst" target="_blank"><span class="font-icon-social-forrst"></span></a></li>
+                        <li><a href="#" title="Follow Me on Behance" target="_blank"><span class="font-icon-social-behance"></span></a></li>
+                        <li><a href="#" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
+                        <li><a href="#" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
+                        <li><a href="#" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
+                        <li><a href="#" title="Follow Me on ThemeForest" target="_blank"><span class="font-icon-social-envato"></span></a></li>
+                        <li><a href="#" title="Follow Me on Zerply" target="_blank"><span class="font-icon-social-zerply"></span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -482,7 +463,7 @@
 
 <!-- Footer -->
 <footer>
-	<p class="credits">&copy;2013 Brushed. <a href="http://themes.alessioatzeni.com/html/brushed/" title="Brushed | Responsive One Page Template">Brushed Template</a> by <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio Atzeni</a></p>
+	<p class="credits">&copy;2018 </p>
 </footer>
 <!-- End Footer -->
 
@@ -495,16 +476,16 @@
 
 <!-- Js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
-<script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
-<script src="_include/js/supersized.3.2.7.min.js"></script> <!-- Slider -->
-<script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
-<script src="_include/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
-<script src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
-<script src="_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
-<script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
-<script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
-<script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-<script src="_include/js/main.js"></script> <!-- Default JS -->
+<script src="{{ asset('js/bootstrap.min.js') }}"></script> <!-- Bootstrap -->
+<script src="{{ asset('js/supersized.3.2.7.min.js') }}"></script> <!-- Slider -->
+<script src="{{ asset('js/waypoints.js') }}"></script> <!-- WayPoints -->
+<script src="{{ asset('js/waypoints-sticky.js') }}"></script> <!-- Waypoints for Header -->
+<script src="{{ asset('js/jquery.isotope.js') }}"></script> <!-- Isotope Filter -->
+<script src="{{ asset('js/jquery.fancybox.pack.js') }}"></script> <!-- Fancybox -->
+<script src="{{ asset('js/jquery.fancybox-media.js') }}"></script> <!-- Fancybox for Media -->
+<script src="{{ asset('js/jquery.tweet.js') }}"></script> <!-- Tweet -->
+<script src="{{ asset('js/plugins.js') }}"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script src="{{ asset('js/main.js') }}"></script> <!-- Default JS -->
 <!-- End Js -->
 
 </body>
