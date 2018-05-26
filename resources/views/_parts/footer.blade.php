@@ -5,8 +5,10 @@
             <div class="span12">
                 <nav id="social">
                     <ul>
-                        <li><a href="#" title="Follow Me on Instagram" target="_blank"><span class="font-icon-social-instagram"></span></a></li>
-                        <li><a href="#" title="Follow Me on VK" target="_blank"><span class="font-icon-social-vk"></span></a></li>
+                        @foreach($bodydata as $info)
+                        <li><a href="{{ $info -> instagram }}" title="Follow Me on Instagram" target="_blank"><span class="font-icon-social-instagram"></span></a></li>
+                        <li><a href="{{ $info -> vk }}" title="Follow Me on VK" target="_blank"><span class="font-icon-social-vk"></span></a></li>
+                        @endforeach
                     </ul>
                 </nav>
             </div>

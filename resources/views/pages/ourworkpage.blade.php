@@ -9,10 +9,10 @@
 
         <nav id="menu">
             <ul id="menu-nav">
-                <li class="current"><a href="#home-slider">Home</a></li>
-                <li><a href="#work">Our Work</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="current"><a href="#home-slider">Главная</a></li>
+                <li><a href="#work">Наши работы</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
 
@@ -27,8 +27,8 @@
         <div class="row">
             <div class="span12">
                 <div class="title-page">
-                    <h2 class="title">Our Work</h2>
-                    <h3 class="title-description">Check Out Our Projects on <a href="#">Dribbble</a>.</h3>
+                    <h2 class="title">Наши работы</h2>
+                    <h3 class="title-description">Описание описание описание</a>.</h3>
                 </div>
             </div>
         </div>
@@ -40,11 +40,11 @@
                 <!-- Filter -->
                 <nav id="options" class="work-nav">
                     <ul id="filters" class="option-set" data-option-key="filter">
-                        <li class="type-work">Type of Work</li>
-                        <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
-                        <li><a href="#filter" data-option-value=".design">Design</a></li>
-                        <li><a href="#filter" data-option-value=".photography">Photography</a></li>
-                        <li><a href="#filter" data-option-value=".video">Video</a></li>
+                        <li class="type-work">Выберите категорию</li>
+                        <li><a href="#filter" data-option-value="*" class="selected">Все работы</a></li>
+                        @foreach($worktypedata as $type)
+                        <li><a href="#filter" data-option-value=".{{ $type -> sort_id }}">{{ $type -> title }}</a></li>
+                        @endforeach
                     </ul>
                 </nav>
                 <!-- End Filter -->
@@ -55,113 +55,21 @@
                     <section id="projects">
                         <ul id="thumbs">
 
+                            @foreach($workdata as $work)
+
                             <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 design">
+                            <li class="item-thumbs span3 {{ $work -> worktype_sort_id }}">
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The City" href="{{ asset('img/work/full/image-01-full.jpg') }}">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ $work -> title }}" href="{{ asset('img/work/full/image-01-full.jpg') }}">
                                     <span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/thumbs/image-01.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                <img src="{{ asset('img/work/thumbs/image-01.jpg') }}" alt="{{ $work -> description }}">
                             </li>
                             <!-- End Item Project -->
 
-                            <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 design">
-                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Office" href="{{ asset('img/work/full/image-02-full.jpg') }}">
-                                    <span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/thumbs/image-02.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                            <!-- End Item Project -->
-
-                            <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 photography">
-                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="{{ asset('img/work/full/image-03-full.jpg') }}">
-                                    <span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/full/image-03-full.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                            <!-- End Item Project -->
-
-                            <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 video">
-                                <!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                                <a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/51460511">
-                                    <span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/thumbs/image-08.jpg') }}" alt="Video">
-                            </li>
-                            <!-- End Item Project -->
-
-                            <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 photography">
-                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Sea" href="{{ asset('img/work/full/image-04-full.jpg') }}">
-                                    <span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/thumbs/image-04.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                            <!-- End Item Project -->
-
-                            <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 photography">
-                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Clouds" href="{{ asset('img/work/full/image-05-full.jpg') }}">
-                                    <span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/thumbs/image-05.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                            <!-- End Item Project -->
-
-                            <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 video">
-                                <!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                                <a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/50834315">
-                                    <span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/thumbs/image-09.jpg') }}" alt="Video">
-                            </li>
-                            <!-- End Item Project -->
-
-                            <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 design">
-                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Dark" href="{{ asset('img/work/full/image-06-full.jpg') }}">
-                                    <span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/thumbs/image-06.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                            <!-- End Item Project -->
-
-                            <!-- Item Project and Filter Name -->
-                            <li class="item-thumbs span3 design">
-                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Beach" href="{{ asset('img/work/full/image-07-full.jpg') }}">
-                                    <span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="{{ asset('img/work/thumbs/image-07.jpg') }}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                            <!-- End Item Project -->
+                            @endforeach
                         </ul>
                     </section>
 
