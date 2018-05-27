@@ -15,6 +15,7 @@ class WorkTableSeeder extends Seeder
             [
                 'title' => 'Изображение 1',
                 'img' => 'img1',
+                'full_img' => 'full_img1',
                 'description' => 'Описание Изображения 1',
                 'worktype_sort_id' => '1',
                 'created_at' => Carbon::now(),
@@ -23,6 +24,7 @@ class WorkTableSeeder extends Seeder
             [
                 'title' => 'Изображение 2',
                 'img' => 'img2',
+                'full_img' => 'full_img2',
                 'description' => 'Описание Изображения 2',
                 'worktype_sort_id' => '1',
                 'created_at' => Carbon::now(),
@@ -31,6 +33,7 @@ class WorkTableSeeder extends Seeder
             [
                 'title' => 'Изображение 3',
                 'img' => 'img3',
+                'full_img' => 'full_img3',
                 'description' => 'Описание Изображения 3',
                 'worktype_sort_id' => '2',
                 'created_at' => Carbon::now(),
@@ -39,6 +42,7 @@ class WorkTableSeeder extends Seeder
             [
                 'title' => 'Изображение 4',
                 'img' => 'img4',
+                'full_img' => 'full_img4',
                 'description' => 'Описание Изображения 4',
                 'worktype_sort_id' => '3',
                 'created_at' => Carbon::now(),
@@ -47,6 +51,7 @@ class WorkTableSeeder extends Seeder
             [
                 'title' => 'Изображение 5',
                 'img' => 'img5',
+                'full_img' => 'full_img5',
                 'description' => 'Описание Изображения 5',
                 'worktype_sort_id' => '4',
                 'created_at' => Carbon::now(),
@@ -55,6 +60,7 @@ class WorkTableSeeder extends Seeder
             [
                 'title' => 'Изображение 6',
                 'img' => 'img6',
+                'full_img' => 'full_img6',
                 'description' => 'Описание Изображения 6',
                 'worktype_sort_id' => '4',
                 'created_at' => Carbon::now(),
@@ -63,6 +69,7 @@ class WorkTableSeeder extends Seeder
             [
                 'title' => 'Изображение 7',
                 'img' => 'img7',
+                'full_img' => 'full_img7',
                 'description' => 'Описание Изображения 7',
                 'worktype_sort_id' => '4',
                 'created_at' => Carbon::now(),
