@@ -196,9 +196,6 @@ $(document).ready(function() {
 			url: "/",
 			data: $('#contact-form').serialize(),
 			success: function(data) {
-
-				console.log('ok');
-
 				if($.isEmptyObject(data.error)){
 					$(".print-error-msg").find("ul").html('');
 					$(".print-error-msg").css('display','block');

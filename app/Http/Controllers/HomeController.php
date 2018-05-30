@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\BodyModel;
 use App\Models\WorkModel;
 use App\Models\WorktypeModel;
 use Illuminate\Support\Facades\Validator;
+use App\Models\MailModel;
 
 class HomeController extends Controller
 {
@@ -38,6 +40,13 @@ class HomeController extends Controller
 
         if ($validator->passes()) {
 
+            $mail = new MailModel();
+            $mail->name = $request['name'];
+            $mail->email = $request['email'];
+            $mail->message = $request['message'];
+            $mail->created_at = Carbon::now();
+            $mail->updated_at = Carbon::now();
+            $mail->save();
 
             return response()->json(['success'=>'Сообщение отправлено!']);
         }
