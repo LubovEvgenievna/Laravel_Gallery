@@ -16,24 +16,18 @@
         <div class="row">
             <div class="span9">
 
-                <form id="contact-form" class="contact-form" action="#">
-                    <p class="contact-name">
-                        <input id="contact_name" type="text" placeholder="Имя" value="" name="name" />
-                    </p>
-                    <p class="contact-email">
-                        <input id="contact_email" type="text" placeholder="Email" value="" name="email" />
-                    </p>
-                    <p class="contact-message">
-                        <textarea id="contact_message" placeholder="Введите текст" name="message" rows="15" cols="40"></textarea>
-                    </p>
-                    <p class="contact-submit">
-                        <a id="contact-submit" class="submit" href="#">Отправить</a>
-                    </p>
-
-                    <div id="response">
-
-                    </div>
-                </form>
+                {!! Form::open(['id' => 'contact-form'], ['class' => 'contact-form']) !!}
+                <p class="contact-name">
+                    {!! Form::text('name', null, ['placeholder' => 'Имя:'], ['id' => 'contact_name']) !!}
+                </p>
+                <p class="contact-name">
+                    {!! Form::text('email', null, ['placeholder' => 'E-mail:'], ['id' => 'contact_email']) !!}
+                </p>
+                <p class="contact-name">
+                    {!! Form::textarea('message', null, ['placeholder' => 'Сообщение:'], ['id' => 'contact_message']) !!}
+                </p>
+                    {!! Form::submit('Отправить', ['class' => 'submit']) !!}
+                {!! Form::close() !!}
 
             </div>
 
