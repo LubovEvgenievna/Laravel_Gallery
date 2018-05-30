@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\BodyModel;
 use App\Models\WorkModel;
 use App\Models\WorktypeModel;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,27 @@ class HomeController extends Controller
         return view('index', $data);
     }
 
-    public function contact(ContactRequest $request) {
+    public function contact(Request $request) {
 
-        return $request;
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required',
+        ],
+        [
+            'name.required' => 'Необходимо указать Имя',
+            'email.required'  => 'Необходимо указать E-mail',
+            'email.email'  => 'Некорректно указан E-mail',
+            'message.required'  => 'Необходимо написать Сообщение',
+        ]);
+
+        if ($validator->passes()) {
+
+
+            return response()->json(['success'=>'Сообщение отправлено!']);
+        }
+
+
+        return response()->json(['error'=>$validator->errors()->all()]);
     }
 }

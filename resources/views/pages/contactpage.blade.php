@@ -31,15 +31,9 @@
 
                 <br><br>
 
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+                <div id="response" class="alert alert-danger print-error-msg" style="display:none">
+                        <ul></ul>
+                </div>
 
             </div>
 

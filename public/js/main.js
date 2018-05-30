@@ -187,30 +187,38 @@ BRUSHED.fancyBox = function(){
    Contact Form
 ================================================== */
 
-BRUSHED.contactForm = function(){
-	$("#contact-submit").on('click',function() {
-		$contact_form = $('#contact-form');
-		
-		var fields = $contact_form.serialize();
+$(document).ready(function() {
+	$(".submit").on('click',function(e) {
+		e.preventDefault();
 		
 		$.ajax({
 			type: "POST",
-			url: "_include/php/contact.php",
-			data: fields,
-			dataType: 'json',
-			success: function(response) {
-				
-				if(response.status){
-					$('#contact-form input').val('');
-					$('#contact-form textarea').val('');
+			url: "/",
+			data: $('#contact-form').serialize(),
+			success: function(data) {
+
+				console.log('ok');
+
+				if($.isEmptyObject(data.error)){
+					$(".print-error-msg").find("ul").html('');
+					$(".print-error-msg").css('display','block');
+					$(".print-error-msg").find("ul").append('<li>'+data.success+'</li>');
+				}else{
+					printErrorMsg(data.error);
 				}
-				
-				$('#response').empty().html(response.html);
 			}
 		});
 		return false;
 	});
-}
+
+	function printErrorMsg (msg) {
+		$(".print-error-msg").find("ul").html('');
+		$(".print-error-msg").css('display','block');
+		$.each( msg, function( key, value ) {
+			$(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+		});
+	}
+});
 
 
 /* ==================================================
