@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 use App\Models\BodyModel;
 use App\Models\WorkModel;
@@ -18,5 +19,10 @@ class HomeController extends Controller
         ];
 
         return view('index', $data);
+    }
+
+    public function contact(ContactRequest $request) {
+
+        return $request;
     }
 }

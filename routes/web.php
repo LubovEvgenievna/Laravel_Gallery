@@ -11,4 +11,5 @@
 |
 */
 
-Route::any('/', ['uses' => 'HomeController@index', 'as' => 'home']);
+Route::get('/', ['uses' => 'HomeController@index', 'as' => 'home']);
+Route::post('/', ['uses' => 'HomeController@contact', 'as' => 'home']);
