@@ -13,3 +13,6 @@
 
 Route::any('/', ['uses' => 'HomeController@index', 'as' => 'home']);
 Route::post('/', ['uses' => 'HomeController@contact', 'as' => 'contact']);
+
+Route::any('/admin', ['uses' => 'Admin\AdminController@index', 'as' => 'admin']);
+
