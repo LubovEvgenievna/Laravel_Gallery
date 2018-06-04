@@ -44,6 +44,8 @@ class HomeController extends Controller
             $mail->name = $request['name'];
             $mail->email = $request['email'];
             $mail->message = $request['message'];
+            $mail->read = 0;
+            $mail->answer = 0;
             $mail->created_at = Carbon::now();
             $mail->updated_at = Carbon::now();
             $mail->save();

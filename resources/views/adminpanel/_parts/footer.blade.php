@@ -15,7 +15,7 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
+<script src="{{ asset('js/adminpanel/main.js') }}"></script> <!-- Default JS -->
 <script type="text/javascript">
     $(document).ready(function() {
         $('.button-collapse').sideNav();

@@ -2,8 +2,8 @@
     <li class="center no-padding">
         <div class="indigo darken-2 white-text" style="height: 180px;">
             <div class="row">
-                <div style="margin-top: -13%;">
-                    <p style="padding-top: 40%">Админ панель</p>
+                <div style="margin-top: -13%;  padding-top: 40%">
+                    <a class=" white-text" href="/admin">Админ панель</a>
                 </div>
             </div>
         </div>
@@ -11,15 +11,20 @@
 
     <ul class="collapsible" data-collapsible="accordion">
         <li>
-            <div class="collapsible-header waves-effect"><b>Сообщения</b></div>
+            <div class="collapsible-header waves-effect messages-div"><b>Сообщения</b></div>
+            @if($count_mail)
+            <div class="new-messages-div">
+                <div class="new-messages">{{ $count_mail }}</div>
+            </div>
+            @endif
             <div class="collapsible-body">
                 <ul>
                     <li>
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Входящие</a>
+                        <a class="waves-effect" style="text-decoration: none;" href="/incoming">Входящие</a>
                     </li>
 
                     <li>
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Исходящие</a>
+                        <a class="waves-effect" style="text-decoration: none;" href="/outgoing">Исходящие</a>
                     </li>
                 </ul>
             </div>
@@ -34,7 +39,7 @@
                     </lI>
 
                     <li>
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Добавить новую</a>
+                        <a class="waves-effect" style="text-decoration: none;" href="#!">Добавить категорию</a>
                     </li>
                 </ul>
             </div>

@@ -7,24 +7,24 @@
                 <div style="padding: 35px;" align="center" class="card">
                     <div class="row">
                         <div class="left card-title">
-                            <b>User Management</b>
+                            <b>Сообщения</b>
                         </div>
                     </div>
 
                     <div class="row">
-                        <a href="#!">
+                        <a href="/incoming">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                                 <i class="indigo-text text-lighten-1 large material-icons">person</i>
-                                <span class="indigo-text text-lighten-1"><h5>Seller</h5></span>
+                                <span class="card-text-size indigo-text text-lighten-1">Входящие</span>
                             </div>
                         </a>
                         <div class="col s1">&nbsp;</div>
                         <div class="col s1">&nbsp;</div>
 
-                        <a href="#!">
+                        <a href="/outgoing">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                                 <i class="indigo-text text-lighten-1 large material-icons">people</i>
-                                <span class="indigo-text text-lighten-1"><h5>Customer</h5></span>
+                                <span class="card-text-size indigo-text text-lighten-1">Исходящие</span>
                             </div>
                         </a>
                     </div>
@@ -35,14 +35,14 @@
                 <div style="padding: 35px;" align="center" class="card">
                     <div class="row">
                         <div class="left card-title">
-                            <b>Product Management</b>
+                            <b>Категории портфолио</b>
                         </div>
                     </div>
                     <div class="row">
                         <a href="#!">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-                                <i class="indigo-text text-lighten-1 large material-icons">store</i>
-                                <span class="indigo-text text-lighten-1"><h5>Product</h5></span>
+                                <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
+                                <span class="card-text-size indigo-text text-lighten-1">Редактировать</span>
                             </div>
                         </a>
 
@@ -51,8 +51,8 @@
 
                         <a href="#!">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-                                <i class="indigo-text text-lighten-1 large material-icons">assignment</i>
-                                <span class="indigo-text text-lighten-1"><h5>Orders</h5></span>
+                                <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
+                                <span class="card-text-size truncate indigo-text text-lighten-1">Добавить категорию</span>
                             </div>
                         </a>
                     </div>
@@ -65,7 +65,7 @@
                 <div style="padding: 35px;" align="center" class="card">
                     <div class="row">
                         <div class="left card-title">
-                            <b>Brand Management</b>
+                            <b>Фото</b>
                         </div>
                     </div>
 
@@ -73,7 +73,7 @@
                         <a href="#!">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                                 <i class="indigo-text text-lighten-1 large material-icons">local_offer</i>
-                                <span class="indigo-text text-lighten-1"><h5>Brand</h5></span>
+                                <span class="card-text-size indigo-text text-lighten-1">Редактировать</span>
                             </div>
                         </a>
 
@@ -83,7 +83,7 @@
                         <a href="#!">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                                 <i class="indigo-text text-lighten-1 large material-icons">loyalty</i>
-                                <span class="indigo-text text-lighten-1"><h5>Sub Brand</h5></span>
+                                <span class="card-text-size indigo-text text-lighten-1">Добавить фото</span>
                             </div>
                         </a>
                     </div>
@@ -94,56 +94,21 @@
                 <div style="padding: 35px;" align="center" class="card">
                     <div class="row">
                         <div class="left card-title">
-                            <b>Category Management</b>
+                            <b>Настройки</b>
                         </div>
                     </div>
                     <div class="row">
                         <a href="#!">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-                                <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
-                                <span class="indigo-text text-lighten-1"><h5>Category</h5></span>
+                                <i class="indigo-text text-lighten-1 large material-icons">store</i>
+                                <span class="indigo-text text-lighten-1">Настройки</span>
                             </div>
                         </a>
                         <div class="col s1">&nbsp;</div>
                         <div class="col s1">&nbsp;</div>
-
-                        <a href="#!">
-                            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-                                <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
-                                <span class="truncate indigo-text text-lighten-1"><h5>Sub Category</h5></span>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
-            <a class="btn-floating btn-large pink waves-effect waves-light">
-                <i class="large material-icons">add</i>
-            </a>
-
-            <ul>
-                <li>
-                    <a class="btn-floating red"><i class="material-icons">note_add</i></a>
-                    <a href="" class="btn-floating fab-tip">Add a note</a>
-                </li>
-
-                <li>
-                    <a class="btn-floating yellow darken-1"><i class="material-icons">add_a_photo</i></a>
-                    <a href="" class="btn-floating fab-tip">Add a photo</a>
-                </li>
-
-                <li>
-                    <a class="btn-floating green"><i class="material-icons">alarm_add</i></a>
-                    <a href="" class="btn-floating fab-tip">Add an alarm</a>
-                </li>
-
-                <li>
-                    <a class="btn-floating blue"><i class="material-icons">vpn_key</i></a>
-                    <a href="" class="btn-floating fab-tip">Add a master password</a>
-                </li>
-            </ul>
         </div>
     </main>
 @stop

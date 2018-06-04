@@ -40,3 +40,176 @@ body {
     color: #FFF;
     width: auto;
 }
+
+.card-text-size {
+    font-size: 14px;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin:0;
+    padding:0;
+    table-layout:fixed;
+    overflow: auto;
+}
+
+
+.table-hover > tbody > tr:hover {
+    background-color: #d9d9d9;
+}
+
+.href-color {
+    color: black;
+}
+
+.column-width {
+    width: 10%;
+}
+
+.table-div {
+    margin: 40px;
+}
+
+.tr-href {
+    cursor: pointer;
+}
+
+.table_overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table-head {
+    background-color: #ededed;
+}
+
+.dontreadmail {
+    background-color: #337ab7;
+    color: #ffffff;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+}
+.panel-default > .panel-heading .badge {
+    color: #f5f5f5;
+    background-color: #333333;
+}
+.panel-default > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #ddd;
+}
+
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.panel-textarea {
+    padding-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+
+    font-size: 9px;
+    padding: 4px 6px;
+}
+
+.btn-right {
+    float: right;
+    margin: 20px;
+}
+
+.messages-div {
+    position: relative;
+}
+
+.new-messages-div {
+    position: absolute;
+    background-color: #337ab7;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    margin-top: -44px;
+    margin-left: 120px;
+    z-index: 2;
+}
+
+.new-messages {
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    margin-top: -24px;
+    padding-left: 5px;
+}
+
+.btn-delete-message:hover{
+    color: #00b0ff;
+}
+
+.admin-content {
+    margin: 40px;
+}
+
+.send-messages-div {
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #337ab7;
+    color: #ffffff;
+}
