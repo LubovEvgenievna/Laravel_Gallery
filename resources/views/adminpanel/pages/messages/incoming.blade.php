@@ -8,6 +8,7 @@
                     <th>Имя</th>
                     <th>E-mail</th>
                     <th class="table_overflow">Сообщение</th>
+                    <th class="table_overflow">Дата</th>
                     <th class="column-width">Ответ</th>
                     <th class="column-width">Удалить</th>
                 </tr>
@@ -20,6 +21,7 @@
                         <td onclick="window.location.href='/message/{{$mail -> id}}'; return false">{{ $mail -> name }}</td>
                         <td onclick="window.location.href='/message/{{$mail -> id}}'; return false">{{ $mail -> email }}</td>
                         <td class="table_overflow"  onclick="window.location.href='/message/{{$mail -> id}}'; return false">{{ $mail -> message }}</td>
+                        <td onclick="window.location.href='/message/{{$mail -> id}}'; return false">{{ $mail -> created_at }}</td>
                         <td class="column-width"  onclick="window.location.href='/message/{{$mail -> id}}'; return false">
                             @if($mail -> answer)
                                 &#10004;

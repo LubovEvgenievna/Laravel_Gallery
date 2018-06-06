@@ -19,27 +19,32 @@ class MessageController extends AdminController
     }
 
     public function incoming() {
-        $this->data['maildata']= MailModel::all();
+        $this->data['maildata']= MailModel::orderBy('created_at', 'desc')
+                                ->get();
 
         return view('adminpanel.pages.messages.incoming', $this->data);
     }
 
     public function outgoing() {
 
-        $this->data ['mymaildata'] = MymailModel::all();
+        $this->data ['mymaildata'] = MymailModel::join('mail', 'mymail.mail_id', 'mail.id')
+                                    ->select('mymail.*', 'mail.name', 'mail.email')
+                                    ->orderBy('created_at', 'desc')
+                                    ->get();
 
         return view('adminpanel.pages.messages.outgoing', $this->data);
     }
 
     public function message($id) {
         $this->data ['maildata'] = MailModel::where('id',$id)
-                            ->first();
-
-        if ($this->data['maildata']['read'] == 0) {
-            MailModel::where('id',$id)
+                            ->get();
+        foreach($this->data['maildata'] as $mail) {
+            if ($mail['read'] == 0) {
+                MailModel::where('id',$id)
                 ->update(['read' => 1]);
 
             --$this->data['count_mail'];
+            }
         }
 
         return view('adminpanel.pages.messages.message', $this->data);
@@ -61,8 +66,10 @@ class MessageController extends AdminController
     }
 
     public function mymessage($id) {
-        $this->data ['mymaildata'] = MymailModel::where('id',$id)
-                            ->first();
+        $this->data ['mymaildata'] = MymailModel::join('mail', 'mymail.mail_id', 'mail.id')
+                                    ->select('mymail.*', 'mail.name', 'mail.email')
+                                    ->where('mymail.id',$id)
+                                    ->first();
 
         return view('adminpanel.pages.messages.mymessage', $this->data);
     }
@@ -91,11 +98,8 @@ class MessageController extends AdminController
 
     public function sendmail(Request $request) {
         $mymail = new MymailModel();
-        $mymail->name = $request['name'];
-        $mymail->email = $request['email'];
+        $mymail->mail_id = $request['id'];
         $mymail->message = $request['message'];
-        $mymail->created_at = Carbon::now();
-        $mymail->updated_at = Carbon::now();
         $mymail->save();
 
         MailModel::where('id', $request['id'])
