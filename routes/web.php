@@ -47,4 +47,12 @@ Route::any('/answer/{id}', ['uses' => 'Admin\MessageController@answer', 'as' => 
     });
 Route::post('/answer/{id}', ['uses' => 'Admin\MessageController@sendmail', 'as' => 'sendmail']);
 
+Route::any('/category', ['uses' => 'Admin\CategoryController@index', 'as' => 'category']);
+Route::post('/category', ['uses' => 'Admin\CategoryController@save', 'as' => 'saveCategory']);
+Route::any('/category/delete/{id}', ['uses' => 'Admin\CategoryController@delete', 'as' => 'deleteCategory'],
+    function($id) {
+        return $id;
+    });
+Route::post('/category/newcategory', ['uses' => 'Admin\CategoryController@newcategory', 'as' => 'newcategory']);
+
 

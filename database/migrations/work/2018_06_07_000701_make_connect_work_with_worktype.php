@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForeignMailIdInMymailTable extends Migration
+class MakeConnectWorkWithWorktype extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateForeignMailIdInMymailTable extends Migration
      */
     public function up()
     {
-        Schema::table('mymail', function (Blueprint $table) {
-            $table->foreign('mail_id')->references('id')->on('mail');
+        Schema::table('work', function (Blueprint $table) {
+            $table->foreign('worktype_sort_id')->references('id')->on('worktype')->onDelete('cascade');
         });
     }
 
@@ -25,8 +25,8 @@ class CreateForeignMailIdInMymailTable extends Migration
      */
     public function down()
     {
-        Schema::table('mymail', function (Blueprint $table) {
-            $table->dropForeign('mail_id');
+        Schema::table('work', function (Blueprint $table) {
+            $table->dropForeign('worktype_sort_id');
         });
     }
 }

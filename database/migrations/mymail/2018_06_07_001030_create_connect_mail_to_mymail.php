@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIndexSortIdInWorktypeTable extends Migration
+class CreateConnectMailToMymail extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddIndexSortIdInWorktypeTable extends Migration
      */
     public function up()
     {
-        Schema::table('worktype', function (Blueprint $table) {
-            $table->integer('sort_id')->unsigned()->change();
-            $table->unique('sort_id');
+        Schema::table('mymail', function (Blueprint $table) {
+            $table->foreign('mail_id')->references('id')->on('mail')->onDelete('cascade');
         });
     }
 
@@ -26,8 +25,8 @@ class AddIndexSortIdInWorktypeTable extends Migration
      */
     public function down()
     {
-        Schema::table('worktype', function (Blueprint $table) {
-            $table->dropForeign('sort_id');
+        Schema::table('mymail', function (Blueprint $table) {
+            $table->dropForeign('mail_id');
         });
     }
 }

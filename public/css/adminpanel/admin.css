@@ -201,6 +201,7 @@ body {
 
 .btn-delete-message:hover{
     color: #00b0ff;
+    cursor: pointer;
 }
 
 .admin-content {
@@ -212,4 +213,9 @@ body {
     padding: 20px;
     background-color: #337ab7;
     color: #ffffff;
+}
+
+.newCat {
+    margin: 20px;
+    width: 50%;
 }

@@ -35,12 +35,8 @@
             <div class="collapsible-body">
                 <ul>
                     <lI>
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Редактировать</a>
+                        <a class="waves-effect" style="text-decoration: none;" href="/category">Редактировать</a>
                     </lI>
-
-                    <li>
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Добавить категорию</a>
-                    </li>
                 </ul>
             </div>
         </li>

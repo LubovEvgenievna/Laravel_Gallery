@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <a href="#!">
+                        <a href="/category">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                                 <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
                                 <span class="card-text-size indigo-text text-lighten-1">Редактировать</span>
@@ -49,12 +49,6 @@
                         <div class="col s1">&nbsp;</div>
                         <div class="col s1">&nbsp;</div>
 
-                        <a href="#!">
-                            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-                                <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
-                                <span class="card-text-size truncate indigo-text text-lighten-1">Добавить категорию</span>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
