@@ -6,6 +6,7 @@
 
 
   <link href="{{ asset('css/adminpanel/admin.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/adminpanel/dropzone.css') }}" rel="stylesheet">
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 

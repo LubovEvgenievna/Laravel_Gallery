@@ -46,11 +46,11 @@
             <div class="collapsible-body">
                 <ul>
                     <lI>
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Редактировать</a>
+                        <a class="waves-effect" style="text-decoration: none;" href="/editworks">Редактировать</a>
                     </lI>
 
                     <li>
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Добавить фото</a>
+                        <a class="waves-effect" style="text-decoration: none;" href="/loadworks">Добавить фото</a>
                     </li>
                 </ul>
             </div>

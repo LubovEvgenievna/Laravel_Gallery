@@ -54,5 +54,8 @@ Route::any('/category/delete/{id}', ['uses' => 'Admin\CategoryController@delete'
         return $id;
     });
 Route::post('/category/newcategory', ['uses' => 'Admin\CategoryController@newcategory', 'as' => 'newcategory']);
+Route::any('/loadworks', ['uses' => 'Admin\WorkController@loadworks', 'as' => 'loadworks']);
+Route::post('/load', ['uses' => 'Admin\WorkController@load', 'as' => 'loadworks']);
+Route::any('/editworks', ['uses' => 'Admin\WorkController@editworks', 'as' => 'editworks']);
 
 

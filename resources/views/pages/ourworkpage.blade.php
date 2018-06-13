@@ -65,7 +65,7 @@
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="img/work/thumbs/{{ $work -> img }}.jpg" alt="{{ $work -> description }}">
+                                <img src="img/work/full/{{ $work -> full_img }}.jpg" alt="{{ $work -> description }}">
                             </li>
                             <!-- End Item Project -->
 
