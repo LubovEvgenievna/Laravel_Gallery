@@ -124,3 +124,14 @@ $(document).ready(function() {
         });
     }
 });
+
+/* Редактор фото */
+function workRed($id) {
+    $(".work-red-on-"+$id).css('display','block');
+    $(".work-red-off-"+$id).css('display','none');
+}
+
+function workRedClose($id) {
+    $(".work-red-on-" + $id).css('display', 'none');
+    $(".work-red-off-" + $id).css('display', 'block');
+}

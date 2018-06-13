@@ -219,3 +219,21 @@ body {
     margin: 20px;
     width: 50%;
 }
+
+.flexbox-edit-works {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-around;
+
+}
+
+.flex-edit-work {
+    width: 30%;
+    margin: 20px;
+}
+
+.edit-work-img {
+    max-height: 100%;
+    max-width: 100%;
+}

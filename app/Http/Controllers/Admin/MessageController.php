@@ -10,7 +10,7 @@ use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Session;
 
-class MessageController extends AdminController
+class MessageController extends MY_Controller
 {
     public function __construct()
     {

@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\WorktypeModel;
 use Illuminate\Support\Facades\Validator;
 
-class CategoryController extends AdminController
+class CategoryController extends MY_Controller
 {
     public function __construct()
     {
