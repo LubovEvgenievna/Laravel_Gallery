@@ -74,7 +74,7 @@
                         <div class="col s1">&nbsp;</div>
                         <div class="col s1">&nbsp;</div>
 
-                        <a href="/loadworks">
+                        <a href="/categoryload">
                             <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                                 <i class="indigo-text text-lighten-1 large material-icons">loyalty</i>
                                 <span class="card-text-size indigo-text text-lighten-1">Добавить фото</span>

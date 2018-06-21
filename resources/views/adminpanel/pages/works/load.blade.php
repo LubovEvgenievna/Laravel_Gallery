@@ -3,7 +3,7 @@
 @section('content')
     <main>
         <div class="admin-content">
-            <form action="/load"
+            <form action="/load/{{ $categoryid }}"
                   class="dropzone"
                   id="my-awesome-dropzone">
                 {{ csrf_field() }}

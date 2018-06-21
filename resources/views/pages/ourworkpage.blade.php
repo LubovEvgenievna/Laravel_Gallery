@@ -60,12 +60,12 @@
                             <!-- Item Project and Filter Name -->
                             <li class="item-thumbs span3 {{ $work -> worktype_sort_id }}">
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ $work -> title }}" href="img/work/full/{{ $work -> full_img }}.jpg">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ $work -> worktitle }}" href="img/work/full/{{ $work -> full_img }}.jpg">
                                     <span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <img src="img/work/full/{{ $work -> full_img }}.jpg" alt="{{ $work -> description }}">
+                                <img src="storage/{{ $work -> full_img }}.jpg" alt="{{ $work -> description }}">
                             </li>
                             <!-- End Item Project -->
 

@@ -49,27 +49,23 @@ function showCategoryRedClose($id) {
 }
 
 function saveCategory($id) {
-    $(".saveCatRed-"+$id).on('click',function(e) {
-        e.preventDefault();
-
-        $.ajax({
-            type: "POST",
-            url: "/category",
-            data: $('#category-form-'+$id).serialize(),
-            success: function(data) {
-                if($.isEmptyObject(data.error)){
-                    $("td.title-"+data.id).empty();
-                    $(".title-"+data.id).append(data.title);
-                    $("td.sort_id-"+data.id).empty();
-                    $(".sort_id-"+data.id).append(data.sort_id);
-                    showCategoryRedClose(data.id);
-                }else{
-                    printErrorMsg(data.error);
-                }
+    $.ajax({
+        type: "POST",
+        url: "/category",
+        data: $('#category-form-'+$id).serialize(),
+        success: function(data) {
+            if($.isEmptyObject(data.error)){
+                $("td.title-"+data.id).empty();
+                $(".title-"+data.id).append(data.title);
+                $("td.sort_id-"+data.id).empty();
+                $(".sort_id-"+data.id).append(data.sort_id);
+                showCategoryRedClose(data.id);
+            }else{
+                printErrorMsg(data.error);
             }
-        });
-        return false;
+        }
     });
+    return false;
 
     function printErrorMsg (msg) {
         $(".print-error-msg").find("ul").html('');
@@ -134,4 +130,24 @@ function workRed($id) {
 function workRedClose($id) {
     $(".work-red-on-" + $id).css('display', 'none');
     $(".work-red-off-" + $id).css('display', 'block');
+}
+
+function saveWork($id) {
+        $.ajax({
+            type: "POST",
+            url: "/edit",
+            data: $('#edit-form-'+$id).serialize(),
+            success: function(data) {
+                if($.isEmptyObject(data.error)){
+                    $(".worktitle-"+data.id).empty();
+                    $(".worktitle-"+data.id).append(data.worktitle);
+                    $(".title-"+data.id).empty();
+                    $(".title-"+data.id).append('<p class="title-'+data.title+'">'+data.category+'</p>');
+                    $(".description-"+data.id).empty();
+                    $(".description-"+data.id).append(data.description);
+                    workRedClose(data.id);
+                }
+            }
+        });
+        return false;
 }

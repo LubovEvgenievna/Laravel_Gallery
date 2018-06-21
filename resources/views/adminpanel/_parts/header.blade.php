@@ -50,7 +50,7 @@
                     </lI>
 
                     <li>
-                        <a class="waves-effect" style="text-decoration: none;" href="/loadworks">Добавить фото</a>
+                        <a class="waves-effect" style="text-decoration: none;" href="/categoryload">Добавить фото</a>
                     </li>
                 </ul>
             </div>

@@ -54,8 +54,20 @@ Route::any('/category/delete/{id}', ['uses' => 'Admin\CategoryController@delete'
         return $id;
     });
 Route::post('/category/newcategory', ['uses' => 'Admin\CategoryController@newcategory', 'as' => 'newcategory']);
-Route::any('/loadworks', ['uses' => 'Admin\WorkController@loadworks', 'as' => 'loadworks']);
-Route::post('/load', ['uses' => 'Admin\WorkController@load', 'as' => 'loadworks']);
+Route::any('/categoryload', ['uses' => 'Admin\WorkController@categoryload', 'as' => 'categoryload']);
+Route::any('/loadworks/{id}', ['uses' => 'Admin\WorkController@loadworks', 'as' => 'loadworks'],
+    function($id) {
+        return $id;
+    });
+Route::post('/load/{id}', ['uses' => 'Admin\WorkController@load', 'as' => 'loadworks'],
+    function($id) {
+        return $id;
+    });
 Route::any('/editworks', ['uses' => 'Admin\WorkController@editworks', 'as' => 'editworks']);
+Route::any('/editworks/delete/{id}', ['uses' => 'Admin\WorkController@delete', 'as' => 'deletework'],
+    function($id) {
+        return $id;
+    });
+Route::post('/edit', ['uses' => 'Admin\WorkController@edit', 'as' => 'edit']);
 
 
