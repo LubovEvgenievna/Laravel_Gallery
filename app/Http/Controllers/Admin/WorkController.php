@@ -82,7 +82,7 @@ class WorkController extends MY_Controller
     }
 
     public function delete ($id) {
-        Storage::disk('public')->delete($id.'.jpg');
+        Storage::disk('public')->delete($id.'jpg');
 
         WorkModel::where('id', $id)
             ->delete();

@@ -69,5 +69,7 @@ Route::any('/editworks/delete/{id}', ['uses' => 'Admin\WorkController@delete', '
         return $id;
     });
 Route::post('/edit', ['uses' => 'Admin\WorkController@edit', 'as' => 'edit']);
+Route::any('/setting', ['uses' => 'Admin\SettingController@setting', 'as' => 'setting']);
+Route::post('/setting', ['uses' => 'Admin\SettingController@savesetting', 'as' => 'savesetting']);
 
 

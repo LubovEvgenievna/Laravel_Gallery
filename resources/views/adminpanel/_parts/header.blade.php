@@ -58,7 +58,9 @@
 
 
         <li>
-            <div class="collapsible-header waves-effect"><b>Настройки страницы</b></div>
+            <div>
+                <b><a href="/setting"  class="collapsible-header waves-effect">Настройки страницы</a></b>
+            </div>
         </li>
 
 
