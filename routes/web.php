@@ -72,4 +72,8 @@ Route::post('/edit', ['uses' => 'Admin\WorkController@edit', 'as' => 'edit']);
 Route::any('/setting', ['uses' => 'Admin\SettingController@setting', 'as' => 'setting']);
 Route::post('/setting', ['uses' => 'Admin\SettingController@savesetting', 'as' => 'savesetting']);
 
+Route::any('/enter', ['uses' => 'Admin\AuthController@enter', 'as' => 'enter']);
+Route::post('/enter', ['uses' => 'Admin\AuthController@login', 'as' => 'login']);
+Route::any('/logout', ['uses' => 'Admin\AuthController@logout', 'as' => 'logout']);
+
 

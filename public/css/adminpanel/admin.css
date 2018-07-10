@@ -237,3 +237,25 @@ body {
     max-height: 100%;
     max-width: 100%;
 }
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.login-content {
+    padding: 100px;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.login-panel-heading {
+    background-color: #337ab7;
+    color: #fff;
+
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}

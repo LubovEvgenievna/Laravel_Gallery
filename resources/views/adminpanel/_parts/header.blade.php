@@ -69,8 +69,7 @@
 
 <header>
     <ul class="dropdown-content" id="user_dropdown">
-        <li><a class="indigo-text" href="#!">Профиль</a></li>
-        <li><a class="indigo-text" href="#!">Выход</a></li>
+        <li><a class="indigo-text" href="/logout">Выход</a></li>
     </ul>
 
     <nav class="indigo" role="navigation">
