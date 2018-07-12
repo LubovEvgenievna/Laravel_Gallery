@@ -35,8 +35,6 @@ class WorkController extends MY_Controller
             ->orderBy('work.created_at','desc')
             ->get();
 
-
-
         $worktypedata = WorktypeModel::get();
         $this->data['worktype']= [];
         foreach($worktypedata as $value) {
@@ -65,10 +63,14 @@ class WorkController extends MY_Controller
     }
 
     public function edit (Request $request) {
+        $worktitle = $this->sanitize($request['worktitle']);
+        $title = $this->sanitize($request['title']);
+        $description = $this->sanitize($request['description']);
+
         $work = WorkModel::find($request['id']);
-        $work->worktitle = $request['worktitle'];
-        $work->worktype_sort_id = $request['title'];
-        $work->description = $request['description'];
+        $work->worktitle = $worktitle;
+        $work->worktype_sort_id = $title;
+        $work->description = $description;
         $work->save();
 
         $result = WorktypeModel::where('id',$request['title'])

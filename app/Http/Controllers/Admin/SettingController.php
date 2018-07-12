@@ -20,14 +20,22 @@ class SettingController extends MY_Controller
     }
 
     public function savesetting(Request $request) {
+        $description = $this->sanitize($request['description']);
+        $email = $this->sanitize($request['email']);
+        $phone = $this->sanitize($request['phone']);
+        $address = $this->sanitize($request['address']);
+        $worktime = $this->sanitize($request['worktime']);
+        $instagram = $this->sanitize($request['instagram']);
+        $vk = $this->sanitize($request['vk']);
+
         $body = BodyModel::find($request['id']);
-        $body->description = $request['description'];
-        $body->email = $request['email'];
-        $body->phone = $request['phone'];
-        $body->address = $request['address'];
-        $body->worktime = $request['worktime'];
-        $body->instagram = $request['instagram'];
-        $body->vk = $request['vk'];
+        $body->description = $description;
+        $body->email = $email;
+        $body->phone = $phone;
+        $body->address = $address;
+        $body->worktime = $worktime;
+        $body->instagram = $instagram;
+        $body->vk = $vk;
         $body->save();
 
         return redirect('setting');

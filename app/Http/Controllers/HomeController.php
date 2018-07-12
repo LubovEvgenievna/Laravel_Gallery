@@ -40,10 +40,14 @@ class HomeController extends Controller
 
         if ($validator->passes()) {
 
+            $name = $this->sanitize($request['name']);
+            $email = $this->sanitize($request['email']);
+            $message = $this->sanitize($request['message']);
+
             $mail = new MailModel();
-            $mail->name = $request['name'];
-            $mail->email = $request['email'];
-            $mail->message = $request['message'];
+            $mail->name = $name;
+            $mail->email = $email;
+            $mail->message = $message;
             $mail->read = 0;
             $mail->answer = 0;
             $mail->created_at = Carbon::now();

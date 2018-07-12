@@ -16,4 +16,13 @@ class Controller extends BaseController
     {
         return $validator->errors()->all();
     }
+
+    //Функция предотвращения атак
+    protected function sanitize($text) {
+        $text = stripslashes($text); //убираем кавычки
+        $text = strip_tags($text); //убираем tags
+        $text = htmlentities($text); //переписали эт-ты HTML
+
+        return $text;
+    }
 }

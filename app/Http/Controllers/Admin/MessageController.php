@@ -97,9 +97,11 @@ class MessageController extends MY_Controller
     }
 
     public function sendmail(Request $request) {
+        $message = $this->sanitize($request['message']);
+
         $mymail = new MymailModel();
         $mymail->mail_id = $request['id'];
-        $mymail->message = $request['message'];
+        $mymail->message = $message;
         $mymail->save();
 
         MailModel::where('id', $request['id'])

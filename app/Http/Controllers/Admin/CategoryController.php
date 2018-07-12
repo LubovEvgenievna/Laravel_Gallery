@@ -32,10 +32,12 @@ class CategoryController extends MY_Controller
         ]);
 
         if ($validator->passes()) {
+            $title = $this->sanitize($request['title']);
+            $sort_id = $this->sanitize($request['sort_id']);
 
             $worktype = WorktypeModel::find($request['id']);
-            $worktype->title = $request['title'];
-            $worktype->sort_id = $request['sort_id'];
+            $worktype->title = $title;
+            $worktype->sort_id = $sort_id;
             $worktype->save();
 
             return response()->json($request);
@@ -63,10 +65,12 @@ class CategoryController extends MY_Controller
             ]);
 
         if ($validator->passes()) {
+            $title = $this->sanitize($request['title']);
+            $sort_id = $this->sanitize($request['sort_id']);
 
             $worktype = new WorktypeModel;
-            $worktype->title = $request['title'];
-            $worktype->sort_id = $request['sort_id'];
+            $worktype->title = $title;
+            $worktype->sort_id = $sort_id;
             $worktype->save();
 
             return redirect()->back();
