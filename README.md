@@ -1,2 +1,4 @@
 # Laravel_Gallery
-Одностраничный сайт-портфолио
+Одностраничный сайт-портфолио + Админпанель
+
+[Демо](http://laravelgallery.webaddiction.ru/)
